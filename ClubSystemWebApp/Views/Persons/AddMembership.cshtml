@@ -1,0 +1,35 @@
+﻿@model ClubSystemWebApp.Models.Membership.AddMembershipModel
+
+@{}
+
+<h1>Add Membership Details</h1>
+
+<form class="row g-3 mt-5" method="post" action="AddMembership">
+    <div class="col-md-12" style="margin-top:2%;">
+        <div class="form-group">
+            @Html.Raw(@ViewBag.Alert)
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label for="PersonId" class="form-label">Person Id</label>
+        <input type="text" class="form-control" asp-for="PersonId" readonly />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label" for="inputType">Membership Type</label>
+        <select class="form-select" asp-for="Type" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="Primary">Primary</option>
+            <option value="Secondary">Secondary</option>
+        </select>
+        <div class="invalid-feedback">
+            Please provide a valid entry.
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label for="inputAccountBalance" class="form-label">AccountBalance</label>
+        <input type="int" class="form-control" asp-for="AccountBalance" required />
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>

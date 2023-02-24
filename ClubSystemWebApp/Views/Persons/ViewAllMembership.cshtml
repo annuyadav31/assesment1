@@ -1,0 +1,31 @@
+﻿@model List<ClubSystemWebApp.Models.Membership.MembershipWithPersonNameModel>
+
+
+@{
+}
+
+<h1>Membership List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Person Name</th>
+            <th>Type</th>
+            <th>Account Balanace</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var membership in Model)
+        {
+            <tr>
+                <td>@membership.PersonName</td>
+                <td>@membership.Type</td>
+                <td>@membership.AccountBalance</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+

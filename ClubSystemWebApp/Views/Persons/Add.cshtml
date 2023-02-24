@@ -1,0 +1,32 @@
+﻿@model ClubSystemWebApp.Models.AddPersonViewModel
+
+
+@{
+}
+
+<h1>Add Person Details</h1>
+<form class="row g-3 mt-5" method="post" action="add">
+    <div class="col-md-6">
+        <label for="inputFirstName" class="form-label">FirstName</label>
+        <input type="text" class="form-control" asp-for="FirstName" required />
+    </div>
+    <div class="col-md-6">
+        <label for="inputLastName" class="form-label">LastName</label>
+        <input type="text" class="form-control" asp-for="LastName" required />
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control"  asp-for="Email" required/>
+    </div>
+    <div class="col-md-6">
+        <label for="inputPhone" class="form-label">Phone</label>
+        <input type="text" class="form-control" pattern="[+]{1}[0-9]{11,14}" minlength="9" maxlength="14" asp-for="Phone" required />
+    </div>
+    <div class="col-md-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="address" class="form-control" asp-for="Address" required />
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Add</button>
+    </div>
+</form>

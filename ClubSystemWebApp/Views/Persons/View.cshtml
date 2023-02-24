@@ -1,0 +1,36 @@
+﻿@model ClubSystemWebApp.Models.UpdatePersonViewModel
+
+@{
+}
+
+<h1>Edit Person Details</h1>
+<form class="row g-3 mt-5" method="post" action="view">
+    <div class="col-md-6">
+        <label for="Id" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly />
+    </div>
+    <div class="col-md-6">
+        <label for="inputFirstName" class="form-label">FirstName</label>
+        <input type="text" class="form-control" asp-for="FirstName" required />
+    </div>
+    <div class="col-md-6">
+        <label for="inputLastName" class="form-label">LastName</label>
+        <input type="text" class="form-control" asp-for="LastName" required />
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email" required />
+    </div>
+    <div class="col-md-6">
+        <label for="inputPhone" class="form-label">Phone</label>
+        <input type="integer" class="form-control" asp-for="Phone" required />
+    </div>
+    <div class="col-md-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="address" class="form-control" asp-for="Address" required />
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+
+</form>

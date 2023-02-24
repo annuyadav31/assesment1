@@ -1,0 +1,40 @@
+﻿@model List<ClubSystemWebApp.Models.Domain.Person>
+
+
+@{
+}
+
+<h1>Persons List</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th></th>
+            <th></th>
+            <th></th>
+</tr>
+</thead>
+<tbody>
+    @foreach(var person in Model)
+        {
+            <tr>
+                <td>@person.Id</td>
+                <td>@person.FirstName</td>
+                <td>@person.LastName</td>
+                <td>@person.Phone</td>
+                <td>@person.Email</td>
+                <td>@person.Address</td>
+                <td><a href="Persons/View/@person.Id">Edit</a></td>
+                <td><a href="Persons/AddMembership/@person.Id">Add Membership</a></td>
+                <td><a href="Persons/ViewMembership/@person.Id">View Membership</a></td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
